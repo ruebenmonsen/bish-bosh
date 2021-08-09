@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- override bootstrap css in this file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Bish-Bosh 2.0</title>
+
+    <!-- Bish-Bosh 1.0
+    <script>
+
+        var data = [0]; // initial 0 for good table index pairing
+        // nested for efficiency
+        function f(upperBoundary) {
+            for (let i = 1; i < upperBoundary; i++) { 
+                if (i % 3 == 0) {
+                    if (i % 4 == 0) {
+                        data.push("Bish-Bosh");
+                    }
+                    else {
+                        data.push("Bish");
+                    }
+                }
+                else if (i % 4 == 0) {
+                    if (i % 3 == 0) {
+                        data.push("Bish-Bosh");
+                    }
+                    else {
+                        data.push("Bosh");
+                    }
+                }
+                else {
+                    data.push(i);
+                }
+            }
+        }
+        f(100);
+        console.table(data);
+
+    </script>
+
+    -->
+
+</head>
+
+<body class="bg-image d-flex flex-column min-vh-100">
+
+    <header class="d-flex flex-column">
+        <div class="bg-dark text-light p-3">
+            <div class="container d-flex justify-content-between">
+                <div class="d-flex d-block">
+                    <a class="text-white navbar-brand" href="#">
+                        Bish-Bosh 2.0</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="d-flex flex-column mt-auto">
+        <div class="container text-light mask pt-4 my-0 ">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1>What is Bish-Bosh?</h1>
+                    <p>Bish-Bosh 2.0 loops through numbers, from 1 to the chosen loop number (field 1). If the number
+                        is
+                        divisible by the first division number (field 2), Bish will be the result instead of the number.
+                        If the
+                        number is divisible by the second division number (field 3), Bosh will be the result instead of
+                        the
+                        number. If the number is divisible by both division numbers, Bish-Bosh will be the result.
+                        Otherwise the number itself will be the result.</p>
+                    <p>The result will then be presented in the textarea (the output field).</p>
+                </div>
+            </div>
+            <div class="row justify-content-center m-4">
+                <div class="col-lg-5 m-4">
+                    <h1 class="text-left p-2 fs-3">Input</h1>
+                    <form class="" action="" method="" id="user-form">
+                        <input class="form-control" type="" name="loop-number" placeholder="Loop number"
+                            aria-label="Loop number">
+                        <span id=""></span>
+                        <br>
+                        <input class="form-control" name="first-divider" placeholder="First division number (bish)">
+                        <span id=""></span>
+                        <br>
+                        <input class="form-control" name="second-divider" placeholder="Second division number (bosh)">
+                        <span id=""></span>
+                        <br>
+                        <button class="btn btn-light" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-5 m-4">
+                    <h1 class="text-left p-2 fs-3">Output</h1>
+                    <textarea class="form-control" id="printed-result" rows="6" placeholder="Output field"
+                        readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex flex-column mt-auto">
+        <div class="bg-dark text-light p-2">
+            <div class="container">
+                <small>&copy;2021 Rueben Monsen</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="bishbosh.js"></script>
+</body>
+
+</html>
